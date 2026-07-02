@@ -13,7 +13,6 @@ The Weather App is a lightweight web application that provides current weather u
 ⚠️ Handles invalid city searches gracefully
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🛠️ Technologies Used
-
 HTML
 CSS
 JavaScript
