@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App with Rating & Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab(event, 'homeTab')">🏠 Home</button>
+    <button class="tab-btn" onclick="showTab(event, 'weatherTab')">🌤 Weather</button>
+    <button class="tab-btn" onclick="showTab(event, 'feedbackTab')">⭐ Rating & Feedback</button>
+  </div>
+
+  <!-- HOME TAB -->
+  <div id="homeTab" class="tab-content active">
+    <div class="home-container">
+      <h1>Welcome to AIET Weather App</h1>
+      <p>Get live weather updates and share your experience with us!</p>
+      <button class="next-tab" onclick="switchToWeather()">Go to Weather →</button>
+    </div>
+  </div>
+  <div class="team-names">
+  Keerthana A : 4AL23IC018 <br>
+  Mithali S : 4AL23IC024 <br>
+  Poorvika S K : 4AL23IC035 <br>
+  Priyanka M K : 4AL23IC038
+</div>
+
+
+  <!-- WEATHER TAB -->
+  <div id="weatherTab" class="tab-content">
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button><img src="images/search.png" alt="Search" /></button>
+      </div>
+
+      <div class="weather">
+        <img src="images/rain.png" class="weather-icon" alt="Weather Icon" />
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">New York</h2>
+
+        <div class="details">
+          <div class="col">
+            <img src="images/humidity.png" alt="Humidity" />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="images/wind.png" alt="Wind" />
+            <div>
+              <p class="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="next-tab" onclick="switchToFeedback()">Go to Rating & Feedback →</button>
+    </div>
+  </div>
+
+  <!-- FEEDBACK TAB -->
+<div id="feedbackTab" class="tab-content">
+  <div class="rating-container">
+    <h2>Rate Your Experience</h2>
+
+    <div class="stars">
+      <img src="images/star.png" class="star" data-value="1" alt="Star 1" />
+      <img src="images/star.png" class="star" data-value="2" alt="Star 2" />
+      <img src="images/star.png" class="star" data-value="3" alt="Star 3" />
+      <img src="images/star.png" class="star" data-value="4" alt="Star 4" />
+      <img src="images/star.png" class="star" data-value="5" alt="Star 5" />
+    </div>
+
+    <p id="rating-text">You rated 0 star(s)</p>
+
+    <textarea id="feedback" placeholder="Share your feedback..."></textarea>
+
+    <button id="submitFeedback">
+      <img src="images/submit-star.png" alt="Submit" /> Submit Feedback
+    </button>
+
+    <!-- Thank you message -->
+    <p id="thankyou-message" style="display:none; color:#ffd700; font-weight:bold; margin-top:10px;">
+      ✅ Thank you for your feedback!
+    </p>
+
+    <!-- 🆕 Back to Home Button -->
+    <button id="backHomeBtn" class="next-tab" style="display:none; margin-top:10px;" onclick="switchToHome()">
+      ← Back to Home
+    </button>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
